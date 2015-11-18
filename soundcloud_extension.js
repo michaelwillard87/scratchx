@@ -10,7 +10,7 @@
   			redirect_uri: ' '
 		});
 		
-		SC.get('/user/183/tracks').then(function(tracks){
+		SC.get('/user/12148579/tracks').then(function(tracks){
   			alert('Latest track: ' + tracks[0].title);
 		});
     };
