@@ -16,7 +16,7 @@
     var descriptor = {
         blocks: [
             // Block type, block name, function name
-            [' ', 'Play %s', 'play_video', 'location'],
+            [' ', 'Play %s', 'play_video', 'https://twitter.com/scratchteam'],
         ]
     };
 
