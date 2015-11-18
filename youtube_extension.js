@@ -8,7 +8,7 @@
         return {status: 2, msg: 'Ready'};
     };
 
-	ext.play_video = function() {
+	ext.play_video = function(location) {
         window.open(location, '_blank');
     };
 
@@ -16,7 +16,7 @@
     var descriptor = {
         blocks: [
             // Block type, block name, function name
-            [' ', 'Play %s', 'play_video'],
+            [' ', 'Play %s', 'play_video', 'location'],
         ]
     };
 
