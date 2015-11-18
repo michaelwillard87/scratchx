@@ -16,7 +16,7 @@
     var descriptor = {
         blocks: [
             // Block type, block name, function name
-            [' ', 'Play Video', 'play_video'],
+            [' ', 'Play %s', 'play_video'],
         ]
     };
 
