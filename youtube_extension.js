@@ -9,14 +9,14 @@
     };
 
 	ext.play_video = function(location) {
-        window.open(location, '_blank');
+        window.open(location);
     };
 
     // Block and block menu descriptions
     var descriptor = {
         blocks: [
-            // Block type, block name, function name
-            [' ', 'Play %s', 'play_video', 'https://twitter.com/scratchteam'],
+            // Block type, block name, function name, default value
+            [' ', 'Play %s', 'play_video', 'https://twitter.com/scratchteam']
         ]
     };
 
