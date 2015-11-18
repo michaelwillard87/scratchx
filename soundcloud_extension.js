@@ -19,7 +19,7 @@
             	sound.pause();
             	is_playing = false;
         	} else {
-            	sound.resume();
+            	sound.play();
             	is_playing = true;
         	}
     	} else {
