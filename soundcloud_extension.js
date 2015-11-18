@@ -1,5 +1,7 @@
 (function(ext) {
 
+	var is_playing = false, sound;
+
 	$.getScript("https://connect.soundcloud.com/sdk/sdk-3.0.0.js", function(){
 	   //alert("Script loaded but not necessarily executed.");
 	});
@@ -9,18 +11,27 @@
   			client_id: 'f703c7a6871d553a7db785800792ccb8',
   			redirect_uri: ' '
 		});
+		
+		SC.stream("/tracks/293", function(obj){
+            obj.play();
+            sound = obj;
+            is_playing = true;
+        });
     };
     
-    ext.sc_play = function() {
-    	SC.stream('tracks/193781466').then(function(player){
-        	player.play();
-        });
+    ext.sc_play_pause = function() {
+    	if(is_playing) {
+            sound.pause();
+            is_playing = false;
+        } else {
+            sound.resume();
+            is_playing = true;
+        }
     };
 
 	ext.sc_stop = function() {
-    	SC.stream('tracks/193781466').then(function(player){
-        	player.stop();
-        });
+    	sound.stop()
+    	is_playing = false;
     };
     
     // Cleanup function when the extension is unloaded
