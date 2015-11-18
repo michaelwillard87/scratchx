@@ -10,8 +10,8 @@
   			redirect_uri: ' '
 		});
 		
-		SC.get('/user/12148579/tracks').then(function(tracks){
-  			alert('Latest track: ' + tracks[0].title);
+		SC.stream('tracks/193781466').then(function(player){
+  			player.play();
 		});
     };
 
