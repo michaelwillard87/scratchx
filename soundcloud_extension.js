@@ -11,7 +11,11 @@
 		});
     };
     
-    ext.sc_play = function()
+    ext.sc_play = function() {
+    	SC.stream('tracks/193781466').then(function(player){
+        	player.play();
+        });
+    };
 
     // Cleanup function when the extension is unloaded
     ext._shutdown = function() {};
