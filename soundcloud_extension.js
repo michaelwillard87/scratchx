@@ -4,16 +4,14 @@
 	   alert("Script loaded but not necessarily executed.");
 	});
     
-    ext.init_sc = function() {
+    ext.sc_init = function() {
     	SC.initialize({
   			client_id: 'f703c7a6871d553a7db785800792ccb8',
   			redirect_uri: ' '
 		});
-		
-		SC.stream('tracks/193781466').then(function(player){
-  			player.play();
-		});
     };
+    
+    ext.sc_play = function()
 
     // Cleanup function when the extension is unloaded
     ext._shutdown = function() {};
@@ -33,7 +31,8 @@
         blocks: [
             // Block type, block name, function name, default value
             [' ', 'Play %s', 'play_video', 'YqeW9_5kURI'],
-            [' ', 'Initialize SoundCloud API', 'init_sc']
+            [' ', 'Initialize SoundCloud API', 'sc_init']
+			[' ', 'Play SoundCloud Track', 'sc_play']
         ]
     };
 
