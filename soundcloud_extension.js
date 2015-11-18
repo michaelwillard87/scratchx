@@ -13,7 +13,7 @@
 		
 		SC.stream('tracks/193781466').then(function(player){
 			obj = player;
-		}
+		});
 		obj.play();
     };
     
