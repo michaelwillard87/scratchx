@@ -14,12 +14,7 @@
     };
     
     ext.sc_play = function() {
-    	SC.stream("/tracks/193781466").then(function(obj){
-			obj.play();
-			//sound = obj;
-			//is_playing = true;
-        });
-        /*if( sound ) {
+        if( sound ) {
         	if(is_playing) {
             	sound.pause();
             	is_playing = false;
@@ -33,11 +28,11 @@
             	sound = obj;
             	is_playing = true;
         	});
-    	}*/
+    	}
     };
 
 	ext.sc_stop = function() {
-    	obj.stop();
+    	sound.stop();
     };
     
     // Cleanup function when the extension is unloaded
