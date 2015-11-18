@@ -14,7 +14,7 @@ new (function() {
     // Block and block menu descriptions
     var descriptor = {
         blocks: [
-            ['', 'load youtube video', 'load_video', 'url'],
+            ['', 'load youtube video', 'load_video', 'url']
         ]
     };
 
