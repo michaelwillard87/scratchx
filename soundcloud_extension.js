@@ -35,7 +35,7 @@
         blocks: [
             // Block type, block name, function name, default value
             [' ', 'Play %s', 'play_video', 'YqeW9_5kURI'],
-            [' ', 'Initialize SoundCloud API', 'sc_init']
+            [' ', 'Initialize SoundCloud API', 'sc_init'],
 			[' ', 'Play SoundCloud Track', 'sc_play']
         ]
     };
