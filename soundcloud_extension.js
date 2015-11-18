@@ -17,7 +17,7 @@
         });
     };
 
-	ext.sc_play = function() {
+	ext.sc_stop = function() {
     	SC.stream('tracks/193781466').then(function(player){
         	player.stop();
         });
