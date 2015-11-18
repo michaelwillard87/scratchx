@@ -1,30 +1,25 @@
-/* Youtube video loader for Scratch */
-/* Michael Willard, Nov 2015 */
-
-new (function() {
-
-    var ext = this;
-    
+(function(ext) {
     // Cleanup function when the extension is unloaded
-    ext._shutdown = function() {
-        console.log('Shutting down...');
-    };
+    ext._shutdown = function() {};
 
+    // Status reporting code
+    // Use this to report missing hardware, plugin or unsupported browser
     ext._getStatus = function() {
         return {status: 2, msg: 'Ready'};
     };
-    
-    ext.load_video = function(location) {
+
+	ext.play_video = function() {
         window.open(location, '_blank');
     };
 
     // Block and block menu descriptions
     var descriptor = {
         blocks: [
-            ['', 'load youtube video', 'load_video', 'url'],
+            // Block type, block name, function name
+            [' ', 'Play Video', 'play_video'],
         ]
     };
 
     // Register the extension
     ScratchExtensions.register('Youtube extension', descriptor, ext);
-})();
+})({});
