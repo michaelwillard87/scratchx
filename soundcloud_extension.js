@@ -23,7 +23,7 @@
             	is_playing = true;
         	}
     	} else {
-        	SC.stream("/tracks/193781466", function(obj){
+        	SC.stream("/tracks/193781466").then(function(obj){
             	obj.play();
             	sound = obj;
             	is_playing = true;
