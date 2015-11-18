@@ -9,6 +9,10 @@
   			client_id: 'f703c7a6871d553a7db785800792ccb8',
   			redirect_uri: ' '
 		});
+		
+		SC.get('/user/183/tracks').then(function(tracks){
+  			alert('Latest track: ' + tracks[0].title);
+		});
     };
 
     // Cleanup function when the extension is unloaded
