@@ -1,11 +1,8 @@
 (function(ext) {
 
-	// 2. This code loads the IFrame Player API code asynchronously.
-    var tag = document.createElement('script');
-
-    tag.src = "https://connect.soundcloud.com/sdk/sdk-3.0.0.js";
-  	var firstScriptTag = document.getElementsByTagName('script')[0];
-	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+	$.getScript("https://connect.soundcloud.com/sdk/sdk-3.0.0.js", function(){
+	   alert("Script loaded but not necessarily executed.");
+	});
       
     SC.initialize({
   		client_id: 'f703c7a6871d553a7db785800792ccb8',
